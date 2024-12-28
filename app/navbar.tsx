@@ -1,10 +1,16 @@
+import Link from "next/link";
+
 export const Navbar = () => (
   <div className="navbar bg-base-100">
     <div className="flex-1">
-      <a className="btn btn-ghost text-xl">meeco.dev</a>
+      <Link className="btn btn-ghost text-xl" href="/">
+        meeco.dev
+      </Link>
       <ul className="menu menu-horizontal px-1">
         <li>
-          <a className="font-bold">Credentials</a>
+          <Link className="font-bold" href="/credentials">
+            Credentials
+          </Link>
         </li>
         <li>
           <a
