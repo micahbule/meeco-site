@@ -2,6 +2,20 @@ export const Navbar = () => (
   <div className="navbar bg-base-100">
     <div className="flex-1">
       <a className="btn btn-ghost text-xl">meeco.dev</a>
+      <ul className="menu menu-horizontal px-1">
+        <li>
+          <a className="font-bold">Credentials</a>
+        </li>
+        <li>
+          <a
+            className="font-bold"
+            href="https://blog.meeco.dev"
+            target="_blank"
+          >
+            Blog
+          </a>
+        </li>
+      </ul>
     </div>
     <div className="flex-none">
       <ul className="menu menu-horizontal px-1">
