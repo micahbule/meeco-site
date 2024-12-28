@@ -6,7 +6,10 @@ export const Navbar = () => (
     <div className="flex-none">
       <ul className="menu menu-horizontal px-1">
         <li>
-          <a>
+          <a
+            href="https://www.linkedin.com/in/micah-andrew-bule-7b982691/"
+            target="_blank"
+          >
             <svg
               width="2em"
               height="2em"
@@ -18,7 +21,7 @@ export const Navbar = () => (
           </a>
         </li>
         <li>
-          <a>
+          <a href="https://github.com/micahbule" target="_blank">
             <svg
               width="2em"
               height="2em"
