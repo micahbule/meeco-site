@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type CertificationCardProps = {
   name: string;
@@ -6,6 +7,7 @@ type CertificationCardProps = {
   imageUrl: string;
   imageAlt: string;
   tags: string[];
+  certificationUrl?: string;
 };
 
 export const CertificationCard = ({
@@ -14,6 +16,7 @@ export const CertificationCard = ({
   imageAlt,
   imageUrl,
   tags,
+  certificationUrl,
 }: CertificationCardProps) => {
   const formattedDate = new Intl.DateTimeFormat("en-US", {
     dateStyle: "long",
@@ -21,7 +24,13 @@ export const CertificationCard = ({
   return (
     <div className="card bg-base-100 w-96 shadow-xl">
       <figure className="pt-3">
-        <Image src={imageUrl} height={150} width={150} alt={imageAlt} />
+        {!!certificationUrl ? (
+          <Link href={certificationUrl} target="_blank">
+            <Image src={imageUrl} height={150} width={150} alt={imageAlt} />
+          </Link>
+        ) : (
+          <Image src={imageUrl} height={150} width={150} alt={imageAlt} />
+        )}
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
