@@ -4,7 +4,15 @@ export default function Page() {
   return (
     <div className="p-5 bg-base-200 h-[calc(100vh-76px)] max-w-full">
       <h1 className="text-2xl font-bold">Certifications</h1>
-      <div className="flex justify-around pt-5">
+      <div className="grid grid-cols-3 gap-4">
+        <CertificationCard
+          name="NodeJS Application Developer"
+          since={new Date("2025-02-13")}
+          imageUrl="https://images.credly.com/size/680x680/images/8ee45313-716a-4142-a9da-30adaaea0c12/Training_Badges_Master_Node-AppDev.png"
+          imageAlt="JSNAD"
+          tags={["NodeJS", "Javascript"]}
+          certificationUrl="https://www.credly.com/badges/b4d56657-e2b1-421c-a5ac-49c6cbe333fb/public_url"
+        />
         <CertificationCard
           name="NodeJS Services Developer"
           since={new Date("2024-10-10")}

@@ -23,7 +23,7 @@ export const CertificationCard = ({
   }).format(since);
   return (
     <div className="card bg-base-100 w-96 shadow-xl">
-      <figure className="pt-3">
+      <figure className="pt-6">
         {!!certificationUrl ? (
           <Link href={certificationUrl} target="_blank">
             <Image src={imageUrl} height={150} width={150} alt={imageAlt} />
